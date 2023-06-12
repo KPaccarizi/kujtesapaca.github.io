@@ -1,0 +1,166 @@
+/*////////// **************** HISTOIRE **************** //////////*/
+
+.p_main{
+	padding-bottom: 300px;
+	background-color: rgb(243, 234, 234);	
+}
+
+.histoire_background{
+	background-image: url("../content/war.jpg");
+	background-size : cover;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position :center;
+  z-index : 1;
+}
+
+/* main content page */
+
+.p_main_content{	
+	display:  flex;
+	flex-direction: column;
+	align-items:  center;
+	margin-top: 20px;
+	background-color: rgb(243, 234, 234);
+}
+
+.p_article{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-color: #ecdfdf;
+	width: 70%;
+	margin:  10px;
+	padding:  10px;
+	box-shadow: rgb(3 44 78 / 25%) 0px 5px 10px -5px, rgb(3 44 78 / 30%) 0px 5px 7px -5px;
+}
+
+/* agrandissement des dates */
+
+.p_article:target .p_txt_main_history_info, .p_txt_main_history_img{
+	max-height: 300px;
+}
+
+.p_txt_main_history_info{
+	max-height: 0em;
+	transition:  0.5s linear 0.4s;
+	overflow: hidden;
+}
+
+.p_txt_main_history_img{
+	width: 300px;
+	max-height: 0em;
+	overflow: hidden;
+}
+
+/* texte général + "origine" */
+
+.p_txt_origin{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.p_txt_origin_left{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	padding:  40px;
+}
+
+.p_txt_origin_right img{
+	width:  500px;
+	height: 300px;
+	padding: 10px;
+}
+
+.p_txt, .p_txt_main_history_info, .p_article{
+	font-family: montserrat;
+}
+
+.p_txt_main_history_info{
+	width: 80%;
+}
+.p_txt h1, h2, h3{
+	font-family: Open sans;
+	padding-bottom: 10px;
+	color: #032C4E;
+	font-size: 25px;
+}
+
+.p_txt h1{
+	font-size: 30px;
+}
+
+/* réglages des boutons "en savoir plus" */
+.p_txt_main_history_btn{
+	text-decoration: none;
+	color: black;
+	font-family: montserrat;
+	padding: 10px;
+}
+
+.p_txt_main_history_btn:hover{
+	text-decoration: underline;
+	color: #38B6FF;
+	transition: 0.5s;
+}
+/* slider 10 photos */ 
+
+.p_slider_window {
+	position: relative;
+	width: 70%;
+	margin-top: 4%;
+	margin-bottom: 1.7%;
+}
+
+.p_slider .p_slider_b img {
+	width: 10%;
+	height: 300px;
+	float: left;
+}
+
+.p_slider {
+	position: absolute;
+	left: 20%;
+	overflow: hidden;
+}
+  
+@keyframes slider {
+	0% {left: 0%; }
+	10% {left: -4%; }
+	20% {left: -104%; }
+	30% {left: -104%; }
+	40% {left: -208%; }
+	50% {left: -208%; }
+	60% {left: -312%; }
+	70% {left: -312%; }
+	80% {left: -416%; }
+	90% {left: -416%; }
+	100% {left: 0%; }
+}
+
+.p_slider_b {
+	position: relative;
+	width: 520%;
+	animation-name: slider;
+	animation-iteration-count: infinite;
+	animation-duration: 15s;
+}
+
+/* texte sur le côté du diaporama */
+
+.p_txt_visit{
+	position: absolute;
+	z-index: 1;
+	left: 2vw;
+	top: -2vw;
+	background-color: rgb(243, 234, 234);
+	left: -18%;
+	background-color: #ecdfdf;
+	padding: 3%;
+	width: 40%;
+	box-shadow: rgb(3 44 78 / 25%) 5px 5px 10px, rgb(3 44 78 / 30%) 0px 5px 7px -5px;
+	font-family: montserrat;
+}

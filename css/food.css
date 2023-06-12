@@ -1,0 +1,165 @@
+/*////////// **************** MUSEES **************** //////////*/
+
+.musee_background{
+    background-image: url("../content/food.jpg");
+    background-size : cover;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position :center;
+  z-index : 1;
+}
+
+/* Carousel interactif */
+
+
+.p_carousel{
+	position: relative;
+}
+
+.p_carousel_inside{
+	position:relative;
+	overflow:hidden;
+	width: 100%;
+}
+
+.p_carousel_open:checked + .p_carousel_item {
+    position: static;
+    opacity: 100;
+}
+
+.p_carousel_item {
+    position: absolute;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+	margin-top: 20px;
+	padding-bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.6s ease-out;
+}
+
+.p_carousel_item img {
+    display: block;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/* texte sur le carousel */
+
+
+.p_z-indexed_txt{
+	position: absolute;
+	display: flex;
+	margin-bottom: 2%;
+	margin-right: 1%;
+	z-index: 2;
+	width: 30%;
+	flex-direction: column;
+	align-items	: center;
+	font-family : montserrat;
+	text-align: center;
+	font-size: 2vh;
+	background-color: #e6d6d6;
+	gap: 20px;
+	padding: 1%;
+	opacity: 85%;
+}
+
+.p_z-indexed_txt:hover{
+	opacity: 100%;
+	transition: 0.2s;
+}
+
+.p_z-indexed_txt a{
+	color: black;
+	background-color: #eadcdc;
+	text-decoration: none;
+	padding: 5%;
+	border: 1px solid black;
+	border-radius: 40px;
+}
+
+.p_z-indexed_txt a:hover{
+	background-color: white;
+	color: #38B6FF;
+	transition: 0.5s;
+}
+
+/* boutons du carousel */
+
+.p_carousel_control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 1;
+}
+
+.p_carousel_control.prev {
+    left: 2%;
+}
+
+.p_carousel_control.next {
+    right: 2%;
+}
+
+.p_carousel_control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#p_carousel_1:checked ~ .control-1,
+#p_carousel_2:checked ~ .control-2,
+#p_carousel_3:checked ~ .control-3,
+#p_carousel_4:checked ~ .control-4,
+#p_carousel_5:checked ~ .control-5 {
+    display: block;
+}
+
+.p_carousel_ind {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.p_carousel_ind li {
+    display: inline-block;
+    margin: 0 5px;
+	
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #b8e5ff;
+}
+
+#p_carousel_1:checked ~ .control-1 ~ .p_carousel_ind li:nth-child(1) .carousel-bullet,
+#p_carousel_2:checked ~ .control-2 ~ .p_carousel_ind li:nth-child(2) .carousel-bullet,
+#p_carousel_3:checked ~ .control-3 ~ .p_carousel_ind li:nth-child(3) .carousel-bullet,
+#p_carousel_4:checked ~ .control-4 ~ .p_carousel_ind li:nth-child(4) .carousel-bullet,
+#p_carousel_5:checked ~ .control-5 ~ .p_carousel_ind li:nth-child(5) .carousel-bullet {
+	color: #38B6FF;
+}

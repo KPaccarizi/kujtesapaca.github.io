@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <title>Travel Guide</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/contact.css">
+  <script src="scripts.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Poiret One' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Alex brush' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/alex-brush" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+  <link rel="shortcut icon" type="image/jpg" href="../content/kosova.svg"/>
+
+</head>
+
+<body>
+
+  <!-- //___________________________ HEADER ___________________________// !-->
+
+  <header>
+    <div class="header_container">
+      <div class="logo_container">
+        <img class="logo" id="logo" src="../content/kosova.svg"></img>
+      </div>
+      <div class="nav_container">
+        <div class="topnav" id="myTopnav">
+          <div>
+            <a class="menu" href="../index.html">Home</a>
+            <a class="menu" href="about.html">About</a>
+          </div>
+          <div class="dropdown">
+            <a href="visit.html">Visit <i class="fa fa-angle-down"></i></a>
+            <div class="dropdown-content drop">
+              <a href="lakes.html">Lakes</a>
+              <a href="mountains.html">Mountains</a>
+              <a href="others.html">Others</a>
+            </div>
+          </div>
+          <div>
+            <a class="menu" href="food.html">Food</a>
+          </div>
+          <div>
+            <a class="active menu" href="contact.html">Contact</a>
+          </div>
+          <div> <a href="javascript:void(0);" class="icon" onclick="myFunction()"> <i class="fa fa-bars"></i></a> </div>
+        </div>
+      </div>
+  </header>
+
+  <div id="ham" class="ham_container">
+    <div class="ham">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="visit.html">Visit</a>
+      <div class="submenu">
+        <a href="lakes.html">&nbsp Lakes</a>
+        <a href="mountains.html">&nbsp Mountains</a>
+        <a href="others.html">&nbsp Others</a>
+      </div>
+      <a href="food.html">Food</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+
+  <!-- //___________________________ END ___________________________// !-->
+
+  <main>
+
+    <div class="contact_background"></div>
+
+    <div class="info-container">
+      <div id="shape6">
+
+        <div class="info_container">
+          <div class="contact_info_container">
+            <div class="contact_info">
+              <h3>Phone</h3>
+              <p>383 44 111 222</p>
+              <br>
+              <h3>Address</h3>
+              <p>Str. "George Bush", Nr.31, 10000 Prishtine,</p>
+              <p>Kosova </p>
+              <br>
+              <h3>Schedule </h3>
+              <p>Monday to Saturday <br>9:30 a.m. - 12:30 p.m. / 2 p.m. - 7 p.m. </p>
+            </div>
+          </div>
+
+          <div class="contact_form_container">
+            <form action=" " id="contact_form">
+              <label for="fname">First name</label>
+              <input type="text" id="fname" name="firstname" placeholder="add name">
+          
+              <label for="lname">Last name</label>
+              <input type="text" id="lname" name="lastname" placeholder="add surname">
+          
+              <label for="subject">Subject</label>
+              <textarea id="subject" name="subject" placeholder="add message" style="height:100px"></textarea>
+          
+              <input type="submit" value="Send" id="send_button">
+            </form>
+            <div id="success_message" style="display: none;">Message sent successfully!</div>
+          </div>
+          
+          <script>
+            // Get the form, subject field, send button, and success message elements
+            const form = document.getElementById('contact_form');
+            const subjectField = document.getElementById('subject');
+            const sendButton = document.getElementById('send_button');
+            const successMessage = document.getElementById('success_message');
+          
+            // Add event listener to the form submission
+            form.addEventListener('submit', function(event) {
+              event.preventDefault(); // Prevent the form from submitting
+          
+              // Check if the subject field is not empty
+              if (subjectField.value.trim() !== '') {
+                // Here, you can perform additional actions such as sending form data to a server
+          
+                // Show the success message
+                successMessage.style.display = 'block';
+          
+                // Reset the form fields
+                form.reset();
+              }
+            });
+          
+            // Add event listener to the subject field
+            subjectField.addEventListener('input', function() {
+              // Enable or disable the send button based on the subject field's value
+              sendButton.disabled = (subjectField.value.trim() === '');
+            });
+          </script>
+          
+          
+        </div>
+      </div>
+    </div>
+
+    <iframe class="map_contact"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1504772.7465994882!2d19.58284465650598!3d42.55509603760227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13537af354bf7df1%3A0xbfffeedfabc31791!2sKosovo!5e0!3m2!1sen!2s!4v1686419451543!5m2!1sen!2s" 
+    width="100%" height="600" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+  </main>
+
+  <!-- //___________________________ FOOTER ___________________________// !-->
+
+  <footer>
+    <div class="footer_container">
+      <div class="compagny_name">
+        <p class="atelier_ponz">Kosova</p>
+      </div>
+      <div class="sitemap">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="visit.html">Visit</a>
+        <a href="food.html">Food</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/kpacarizi/" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="https://github.com/KPaccarizi" target ="_blank" class="fa fa-github"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- //___________________________ END ___________________________// !-->
+
+  <div class="copyright">
+    <p>Copyright 2023 - Travel to Kosova - Kujtesa Pacarizi</p>
+  </div>
+
+</body>
+
+</html>

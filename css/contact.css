@@ -1,0 +1,113 @@
+/*////////// **************** CONTACT **************** //////////*/
+
+
+.contact_background{
+  background-image: url("../content/Prishtine/foto1.jpg");
+  background-size : cover;
+  height: 150px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position :center;
+  z-index : 1;
+}
+
+.info_container{
+  display : flex;
+  flex-direction : row;
+  justify-content: center;
+  gap: 200px;
+}
+
+@media screen and (max-width: 1000px) {
+  .info_container{
+    display : flex;
+    flex-direction : column;
+    justify-content: center;
+    gap: 50px;
+  }
+  #shape6{
+    height : 800px !important;
+    width : 100%;
+    background-color : rgb(243, 234, 234);
+    margin-bottom: 5px;
+    font-family : montserrat;
+  }
+  .contact_form_container{
+    height : 400px;
+    width : auto !important;
+    padding: 20px;
+    margin-left : 50px;
+    margin-right : 50px;
+  }
+  .contact_info_container{
+    padding-top : 20px;
+  }
+  }
+
+
+.contact_info_container{
+  /* background-color : blue; */
+  display : flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_form_container{
+  height : 400px;
+  width : 600px;
+  padding: 20px;
+}
+
+.contact_info{
+  background-color : white;
+  height : 355px;
+  width : 400px;
+  display : flex;
+  flex-direction : column;
+  justify-content: center;
+  text-align: center;
+  line-height: 22px;
+}
+
+/* Contact_form */
+
+ 
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 5px 9px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#shape6{
+  height : 400px;
+  width : 100%;
+  background-color : rgb(243, 234, 234);
+  margin-bottom:5px;
+  font-family : montserrat;
+}
+
+.map_contact{
+  margin-top : 15px;
+}
