@@ -78,11 +78,23 @@
           aria-hidden="true"></i></a>
     </div>
 
-    <div class="video-container" id="video1">
-      <video autoplay muted loop>
+    <div class="video-container" >
+
+      <iframe src="content/music-kosova.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> 
+      
+      
+      <audio autoplay loop  id="playAudio">
+      <source src="content/music-kosova.mp3"/>
+      </audio>
+      
+      <video  id="video1" autoplay muted loop>
         <source src="content/Welcome_to_Kosova_v2.mp4" type="video/mp4" />
       </video>
-    </div>
+      
+      <button id="muteButton">Mute Music</button>
+      
+      </div>
+      
     <div class="info-container">
 
       <div id="shape2" class="shape_news">

@@ -11,13 +11,32 @@ function myFunction() {
   }
 }
 
-var vid = document.getElementById("video1");
+var muteButton = document.getElementById("muteButton");
+var playAudio = document.getElementById("playAudio");
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
-function slowPlaySpeed() { 
-    vid.playbackRate = 0.5;
-} 
+muteButton.addEventListener("click", toggleMute);
 
-
+function toggleMute() {
+    if (isChrome) {
+        // This part will be executed if the user is using Chrome
+        if (playAudio.muted) {
+            playAudio.muted = false;
+            muteButton.innerText = "Unmute";
+        } else {
+            playAudio.muted = true;
+            muteButton.innerText = "Mute";
+        }
+    } else {
+        // This part will be executed if the user is not using Chrome
+        if (!playAudio.paused) {
+            playAudio.pause();
+        } else {
+            playAudio.play();
+        }
+        muteButton.innerText = playAudio.muted ? "Unmute" : "Mute";
+    }
+}
 // SCROLL + DISPLAY EFFECT//
 
 
